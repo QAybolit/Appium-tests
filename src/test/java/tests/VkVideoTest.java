@@ -14,6 +14,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import pages.vkvideo.VkVideoMainPage;
+import utils.NetworkConnectionUtils;
 
 @Owner("Dina Kholomkina")
 public class VkVideoTest extends BaseTest {
@@ -40,6 +41,7 @@ public class VkVideoTest extends BaseTest {
 
     @AfterEach
     public void tearDown() {
+        NetworkConnectionUtils.enableNetworkConnection();
         closeWebDriver();
     }
 }
