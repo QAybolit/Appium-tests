@@ -44,8 +44,8 @@ public class VideoPage {
     public VideoPage checkVideoNotDisplayed() {
         NetworkConnectionUtils.disableNetworkConnection();
 
-        assertTrue(this.mainVideoLoader.isDisplayed());
-        assertTrue(this.similarVideoShimmer.isDisplayed());
+        this.mainVideoLoader.shouldBe(visible);
+        this.similarVideoShimmer.shouldBe(visible);
 
         this.video.click();
         this.seekBar.shouldNotBe(visible);
