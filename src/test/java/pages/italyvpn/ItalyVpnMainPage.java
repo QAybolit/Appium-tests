@@ -1,4 +1,4 @@
-package pages.vpnapp;
+package pages.italyvpn;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import io.appium.java_client.AppiumBy;
 
-public class VpnAppMainPage {
+public class ItalyVpnMainPage {
 
     private final SelenideElement connectionLabel = $(AppiumBy.xpath("//android.widget.TextView[@text='Determining the best server ...']"));
     private final SelenideElement turnOnVpnBtn = $(AppiumBy.xpath("//android.widget.TextView[@text='ON']"));

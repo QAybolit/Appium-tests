@@ -22,11 +22,11 @@ public class AndroidDriverProvider {
         return new AndroidDriver(getServerUrl(), options);
     }
 
-    public static AndroidDriver createDriverForFreeVpn() {
+    public static AndroidDriver createDriverForItalyVpn() {
         UiAutomator2Options options = getBaseOptions()
-                .setApp(getFileAbsolutePath(projectConfig.freeVpnApp()))
-                .setAppPackage(projectConfig.freeVpnAppPackage())
-                .setAppActivity(projectConfig.freeVpnAppActivity());
+                .setApp(getFileAbsolutePath(projectConfig.italyVpnApp()))
+                .setAppPackage(projectConfig.italyVpnAppPackage())
+                .setAppActivity(projectConfig.italyVpnAppActivity());
 
         return new AndroidDriver(getServerUrl(), options);
     }

@@ -40,12 +40,12 @@ public interface ProjectConfig extends Config {
     @Key("vk.video.app.activity")
     String vkVideoAppActivity();
 
-    @Key("free.vpn.app")
-    String freeVpnApp();
+    @Key("italy.vpn.app")
+    String italyVpnApp();
 
-    @Key("free.vpn.app.package")
-    String freeVpnAppPackage();
+    @Key("italy.vpn.app.package")
+    String italyVpnAppPackage();
 
-    @Key("free.vpn.app.activity")
-    String freeVpnAppActivity();
+    @Key("italy.vpn.app.activity")
+    String italyVpnAppActivity();
 }
