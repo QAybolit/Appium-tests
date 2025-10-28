@@ -17,6 +17,7 @@ public class VkVideoMainPage {
     private final SelenideElement closeBannerBtn = $(AppiumBy.id("close_btn_left"));
     private final SelenideElement skipBtn = $(AppiumBy.id("fast_login_tertiary_btn"));
 
+    private final ElementsCollection videoDurations = $$(AppiumBy.id("duration"));
     private final ElementsCollection videos = $$(AppiumBy.id("video_display"));
 
 
@@ -30,7 +31,7 @@ public class VkVideoMainPage {
 
     @Step("Пропустить логин, если он отображается")
     public VkVideoMainPage skipFastLoginIfExist() {
-        if (this.skipBtn.is(visible, Duration.ofMillis(2000))) {
+        if (this.skipBtn.is(visible, Duration.ofMillis(3000))) {
             this.skipBtn.click();
         }
         return this;
@@ -38,6 +39,7 @@ public class VkVideoMainPage {
 
     @Step("Выбрать первое видео из списка")
     public VideoPage selectFirstVideo() {
+        this.videoDurations.first().shouldBe(visible);
         this.videos.first().click();
         return new VideoPage();
     }

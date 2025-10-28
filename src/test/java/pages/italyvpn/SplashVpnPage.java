@@ -25,11 +25,9 @@ public class SplashVpnPage {
         return this;
     }
 
-    @Step("Подтвердить согласие на обработку персональных данных, если появилось")
+    @Step("Подтвердить согласие на обработку персональных данных")
     public ItalyVpnMainPage acceptAgreementIfExist() {
-        if (this.agreement.is(visible, Duration.ofMillis(7000))) {
-            this.agreement.click();
-        }
+        this.agreement.shouldBe(visible).click();
         return new ItalyVpnMainPage();
     }
 }

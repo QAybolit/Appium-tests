@@ -27,7 +27,8 @@ public class VideoPage {
 
     @Step("Проверить, что открывшееся видео воспроизводится")
     public VideoPage checkVideoIsDisplayed() {
-        this.video.click();
+        this.mainVideoLoader.shouldNotBe(visible);
+        this.video.shouldBe(visible).click();
         this.seekBar.shouldBe(visible);
         this.videoButtonsView.shouldBe(visible);
         this.currentProgress.shouldBe(visible);
