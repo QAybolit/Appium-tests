@@ -3,6 +3,7 @@ package tests;
 import static config.ProjectConfig.projectConfig;
 
 import com.codeborne.selenide.Configuration;
+
 import org.junit.jupiter.api.BeforeAll;
 
 import drivers.AndroidDriverProvider;

@@ -1,6 +1,7 @@
 package tests;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
