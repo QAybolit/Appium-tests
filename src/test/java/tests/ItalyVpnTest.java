@@ -33,7 +33,7 @@ public class ItalyVpnTest extends BaseTest {
         String vpnStatus = "Connecting...";
 
         splashVpnPage.openSplashVpnPage()
-                .acceptAgreementIfExist()
+                .acceptAgreement()
                 .checkVpnMainPage()
                 .clickStartVpnConnectionBtn()
                 .checkVpnStatus(vpnStatus);

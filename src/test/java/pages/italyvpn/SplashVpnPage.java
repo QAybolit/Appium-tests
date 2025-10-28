@@ -7,8 +7,6 @@ import static io.appium.java_client.AppiumBy.androidUIAutomator;
 
 import com.codeborne.selenide.SelenideElement;
 
-import java.time.Duration;
-
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
 
@@ -26,7 +24,7 @@ public class SplashVpnPage {
     }
 
     @Step("Подтвердить согласие на обработку персональных данных")
-    public ItalyVpnMainPage acceptAgreementIfExist() {
+    public ItalyVpnMainPage acceptAgreement() {
         this.agreement.shouldBe(visible).click();
         return new ItalyVpnMainPage();
     }
